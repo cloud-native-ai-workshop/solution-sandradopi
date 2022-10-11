@@ -42,6 +42,6 @@ vcsInfo:
 
 partOf: inventory
 
-connectsTo: ""
+connectsTo: bff-solution-sandradopi
 
 runtime: spring
