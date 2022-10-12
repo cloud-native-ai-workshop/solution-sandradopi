@@ -33,6 +33,7 @@ repositories {
 	mavenCentral()
 }
 
+apply from: 'gradle/build-mongodb.gradle'
 dependencyManagement {
     dependencies {
         dependency group: 'org.springframework.cloud', name: 'spring-cloud-starter-sleuth', version: '2.2.8.RELEASE'
