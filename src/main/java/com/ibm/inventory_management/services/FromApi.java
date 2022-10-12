@@ -6,7 +6,7 @@ import com.ibm.inventory_management.models.From;
 
 public interface FromApi {
 
-  void addFrom(String electricalapliance, String date, String starttime, String endtime);
+  void addFrom(String electricalapliance, String date, String starttime, String endtime) throws Exception;
 
 
 }

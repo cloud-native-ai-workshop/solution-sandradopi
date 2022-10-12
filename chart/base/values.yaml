@@ -41,5 +41,5 @@ vcsInfo:
   branch: ""
 
 partOf: inventory
-
+mongodbAccess: mongodb-access
 runtime: spring

@@ -61,6 +61,31 @@ spec:
               value: ""
             - name: LOG_LEVEL
               value: {{ .Values.logLevel | quote }}
+            - name: MONGODB_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.mongodbAccess | quote }}
+                  key: MONGODB_USERNAME
+            - name: MONGODB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.mongodbAccess | quote }}
+                  key: MONGODB_PASSWORD
+            - name: MONGODB_DATABASE
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.mongodbAccess | quote }}
+                  key: MONGODB_DATABASE
+            - name: MONGODB_PORT
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.mongodbAccess | quote }}
+                  key: MONGODB_PORT
+            - name: MONGODB_HOST
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.mongodbAccess | quote }}
+                  key: MONGODB_HOST
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}

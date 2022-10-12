@@ -1,4 +1,14 @@
 spring:
+  data:
+    mongodb:
+      username: "mongodb"
+      password: "YnjLIoVmtn"
+      database: "mongodb"
+      authentication-database: "admin"
+      port: "27017"
+      host: "mongodb"
+  autoconfigure:
+   exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
   application:
     name: "${IMAGE_NAME:template-spring-boot}"
 
