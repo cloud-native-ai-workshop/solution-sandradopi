@@ -19,6 +19,7 @@ public class FromController {
 
   @PostMapping(path = "/from_prediction")
   public void addFrom(@RequestParam String electricalapliance, @RequestParam String date, @RequestParam String starttime, @RequestParam String endtime) throws Exception{
+    console.log("JAVA")
     this.service.addFrom(electricalapliance,date,starttime,endtime);
   }
 

@@ -1,12 +1,12 @@
 spring:
   data:
     mongodb:
-      username: "mongodb"
-      password: "YnjLIoVmtn"
-      database: "mongodb"
-      authentication-database: "admin"
-      port: "27017"
-      host: "mongodb"
+      username: "${MONGO_USERNAME:root}"
+      password: "${MONGO_PASSWORD:YnjLIoVmtn}"
+      database: "${MONGO_DATABASE:test}"
+      port: "${MONGO_PORT:27017}"
+      host: "${MONGO_HOST: mongodb}"
+      authentication-database: "${MONGO_DATABASE:admin}"
   autoconfigure:
    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
   application:
